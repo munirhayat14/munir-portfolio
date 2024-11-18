@@ -1,75 +1,57 @@
-# Nuxt Minimal Starter
+# Munir Bahrin - Portfolio Website 🌐
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Welcome to the repository for my personal portfolio website! This project showcases my journey as a **Software Developer**, highlighting my skills, certifications, and professional experience through a clean and modern user interface.
 
-## Setup
+## 🚀 Features
 
-Make sure to install dependencies:
+- **Dynamic Hero Section** with ripple wave animations.
+- **Responsive Design** ensuring seamless user experience on all devices.
+- **Interactive Skills Section** with categorized tools and technologies.
+- **Certificates Section** showcasing professional achievements with detailed information and links.
+- **Professional Projects Section** highlighting real-world implementations.
+- **Modern UI/UX Design** built with Vue.js, Tailwind CSS, and DaisyUI.
+- **Optimized for Performance** with AOS animations and responsive components.
 
-```bash
-# npm
-npm install
+## 🛠️ Technologies Used
 
-# pnpm
-pnpm install
+- **Frontend Framework:** [Vue.js](https://vuejs.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/)
+- **Animations:** [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
 
-# yarn
-yarn install
+## 📜 Certifications Displayed
 
-# bun
-bun install
-```
+- **Certified Kubernetes Administrator (CKA)** - Linux Foundation  
+- **Certified DevOps Practitioner** - CCSD Council  
 
-## Development Server
+## 🖼️ Preview
 
-Start the development server on `http://localhost:3000`:
+![Portfolio Screenshot](https://example.com/portfolio-screenshot.png) <!-- Replace with actual screenshot URL -->
 
-```bash
-# npm
-npm run dev
+## 🎯 Purpose
 
-# pnpm
-pnpm dev
+This project serves as a platform to demonstrate my skills, certifications, and professional experience while providing potential collaborators and employers with a glimpse into my technical expertise.
 
-# yarn
-yarn dev
+## 💻 Running Locally
 
-# bun
-bun run dev
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/munirbahrin14/portfolio-website.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd portfolio-website
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Production
+## 📄 License
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This project is licensed under the [MIT License](LICENSE).
