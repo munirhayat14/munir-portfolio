@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+:root {
+  --tw-font-inter: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--tw-font-inter);
+  font-feature-settings: "ss03", "cv02", "cv11";
+}
