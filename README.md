@@ -26,7 +26,7 @@ Welcome to the repository for my personal portfolio website! This project showca
 
 ## 🖼️ Preview
 
-![Portfolio Screenshot](https://example.com/portfolio-screenshot.png) <!-- Replace with actual screenshot URL -->
+![Portfolio Screenshot](https://github.com/munirhayat14/munir-portfolio/blob/main/assets/images/about.png)
 
 ## 🎯 Purpose
 
@@ -36,11 +36,11 @@ This project serves as a platform to demonstrate my skills, certifications, and 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/munirbahrin14/portfolio-website.git
+   git clone https://github.com/munirbahrin14/munir-portfolio.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd portfolio-website
+   cd munir-portfolio
    ```
 3. Install dependencies:
    ```bash
