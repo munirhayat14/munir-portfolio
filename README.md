@@ -1,6 +1,6 @@
 # Munir Bahrin - Portfolio Website 🌐
 
-Welcome to the repository for my personal portfolio website! This project showcases my journey as a **Software Developer**, highlighting my skills, certifications, and professional experience through a clean and modern user interface.
+Welcome to the repository for my personal portfolio website! This project showcases my journey as a **Software Developer** and **DevOps**, highlighting my skills, certifications, and professional experience through a clean and modern user interface.
 
 ## 🚀 Features
 
