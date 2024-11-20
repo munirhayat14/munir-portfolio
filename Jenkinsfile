@@ -6,27 +6,6 @@ pipeline {
                 checkout scm
             }
         }
-        // stage('Run Security Tests') {
-        //     parallel {
-        //         stage('SonarQube Analysis') {
-        //             steps {
-        //                 withSonarQubeEnv('SonarQubeServer') {
-        //                     sh './gradlew sonarqube'
-        //                 }
-        //             }
-        //         }
-        //         stage('Trivy Scan') {
-        //             steps {
-        //                 sh 'trivy image my-portfolio:latest'
-        //             }
-        //         }
-        //         stage('OWASP Dependency Check') {
-        //             steps {
-        //                 sh './dependency-check.sh'
-        //             }
-        //         }
-        //     }
-        // }
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t my-portfolio:latest .'
@@ -40,6 +19,17 @@ pipeline {
                 docker run -d --name portfolio -p 80:80 my-portfolio:latest
                 '''
             }
+        }
+    }
+    post {
+        always {
+            echo 'Pipeline execution completed.'
+        }
+        success {
+            echo 'Deployment successful!'
+        }
+        failure {
+            echo 'Deployment failed!'
         }
     }
 }
