@@ -14,9 +14,8 @@ pipeline {
         stage('Deploy to VPS') {
             steps {
                 sh '''
-                docker stop portfolio || true
-                docker rm portfolio || true
-                docker run -d --name portfolio -p 80:80 munirhayat/portfolio:latest
+                docker-compose down --remove-orphans
+                docker-compose up -d portfolio
                 '''
             }
         }
