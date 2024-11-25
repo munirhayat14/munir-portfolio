@@ -1,5 +1,11 @@
 pipeline {
     agent any
+
+    environment {
+        COMPOSE_FILE = "docker-compose.yml"
+        DOCKER_WORKDIR = "/home/munir"
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -14,24 +20,18 @@ pipeline {
         stage('Deploy to VPS') {
             steps {
                 sh '''
-                    docker run --rm \
-                    -v /var/run/docker.sock:/var/run/docker.sock \
-                    -v $(pwd):/app \
-                    -w /app \
                     docker-compose down --remove-orphans
-
-                    docker run --rm \
-                    -v /var/run/docker.sock:/var/run/docker.sock \
-                    -v $(pwd):/app \
-                    -w /app \
                     docker-compose up -d portfolio
                 '''
             }
         }
     }
+
     post {
         always {
             echo 'Pipeline execution completed.'
+            echo 'Cleaning up temporary files...'
+            sh 'docker system prune -f'
         }
         success {
             echo 'Deployment successful!'
