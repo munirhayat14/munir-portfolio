@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         COMPOSE_FILE = "docker-compose.yml"
-        DOCKER_WORKDIR = "/home/munir"
+        DOCKER_WORKDIR = "/home/munir" // Update as necessary
     }
 
     stages {
@@ -20,8 +20,17 @@ pipeline {
         stage('Deploy to VPS') {
             steps {
                 sh '''
-                    docker-compose down --remove-orphans
-                    docker-compose up -d portfolio
+                    docker run --rm \
+                    -v /var/run/docker.sock:/var/run/docker.sock \
+                    -v /home/munir:/app \
+                    -w /app \
+                    docker/compose:1.29.2 down --remove-orphans
+
+                    docker run --rm \
+                    -v /var/run/docker.sock:/var/run/docker.sock \
+                    -v /home/munir:/app \
+                    -w /app \
+                    docker/compose:1.29.2 up -d portfolio
                 '''
             }
         }
