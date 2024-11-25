@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t my-portfolio:latest .'
+                sh 'docker build -t munirhayat/portfolio:latest .'
             }
         }
         stage('Deploy to VPS') {
@@ -16,7 +16,7 @@ pipeline {
                 sh '''
                 docker stop portfolio || true
                 docker rm portfolio || true
-                docker run -d --name portfolio -p 80:80 my-portfolio:latest
+                docker run -d --name portfolio -p 80:80 munirhayat/portfolio:latest
                 '''
             }
         }
