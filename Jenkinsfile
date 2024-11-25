@@ -12,19 +12,21 @@ pipeline {
             }
         }
         stage('Deploy to VPS') {
-            sh '''
-                docker run --rm \
-                -v /var/run/docker.sock:/var/run/docker.sock \
-                -v $(pwd):/app \
-                -w /app \
-                docker/compose:latest down --remove-orphans
+            steps {
+                sh '''
+                    docker run --rm \
+                    -v /var/run/docker.sock:/var/run/docker.sock \
+                    -v $(pwd):/app \
+                    -w /app \
+                    docker/compose:latest down --remove-orphans
 
-                docker run --rm \
-                -v /var/run/docker.sock:/var/run/docker.sock \
-                -v $(pwd):/app \
-                -w /app \
-                docker/compose:latest up -d portfolio
-            '''
+                    docker run --rm \
+                    -v /var/run/docker.sock:/var/run/docker.sock \
+                    -v $(pwd):/app \
+                    -w /app \
+                    docker/compose:latest up -d portfolio
+                '''
+            }
         }
     }
     post {
