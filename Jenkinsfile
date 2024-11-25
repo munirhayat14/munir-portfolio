@@ -18,13 +18,13 @@ pipeline {
                     -v /var/run/docker.sock:/var/run/docker.sock \
                     -v $(pwd):/app \
                     -w /app \
-                    docker/compose:latest down --remove-orphans
+                    docker-compose down --remove-orphans
 
                     docker run --rm \
                     -v /var/run/docker.sock:/var/run/docker.sock \
                     -v $(pwd):/app \
                     -w /app \
-                    docker/compose:latest up -d portfolio
+                    docker-compose up -d portfolio
                 '''
             }
         }
