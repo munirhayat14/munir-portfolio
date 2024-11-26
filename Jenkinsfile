@@ -45,9 +45,12 @@ pipeline {
             steps {
                 sshagent(credentials: ['TertibSSHKey']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no munir@217.15.166.187 <<EOF
-                        echo "Test SSH Connection"
-                        EOF
+                        ssh -o StrictHostKeyChecking=no munir@217.15.166.187 << EOF
+                            cd /home/munir
+                            docker-compose pull portfolio
+                            docker-compose up --force-recreate -d portfolio
+                            docker system prune --volumes -f
+                        << EOF
                     '''
                 }
             }
