@@ -98,7 +98,7 @@
           alt="Munir Bahrin Profile Picture"
           src="https://images.pexels.com/photos/3153203/pexels-photo-3153203.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         />
-        <div class="pr-20">
+        <div class="pb-20 lg:pb-0 lg:pr-20">
           <h1 class="text-5xl font-bold">
             Hi, I'm <span class="text-emerald-600">Munir</span> Bahrin
           </h1>
